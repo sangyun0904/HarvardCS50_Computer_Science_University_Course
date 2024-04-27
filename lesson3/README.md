@@ -26,3 +26,5 @@ make 명령어를 통해 코드를 컴파일 할 때에도 이 모든 과정이 
 main() 함수는 디폴트로 0를 리턴한다.
 프로그램을 실행한 후 echo $? 명령어를 입력하면 리턴된 값을 볼 수 있다.
 이 값을 exit status라고 부른다.
+
+Segmentation faults in C or C++ is an error that occurs when a program attempts to access a memory location it does not have permission to access. 
