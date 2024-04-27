@@ -3,6 +3,7 @@
 #include <string.h>
 
 // C에서 typedef struct를 통해 타입을 생성할 수 있다. 
+// C에서 생성한 타임의 attribute (속성 ex)name) 의 디폴트 값을 설정할 수 없다. 
 typedef struct
 {
     string name;

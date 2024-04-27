@@ -14,3 +14,44 @@ O(n2) -> O(nlogn) -> O(n) -> O(long) -> O(1)
 Linear search, Binary search 전부 오메가(1) 이 된다. 
 
 마지막으로 세타 최고로 운이좋은 오메가와 최악의 경우인 big O가 같을 때 예를들어 방안에 있는 사람의 수를 하나하나 전부 세는 알고리즘 같은 경우 세타(n)과 같이 표현할 수 있다. 
+
+### Sorting 
+
+방법 1. Selection Sort
+For i from 0 to n-1 
+    numbers[i] 부터 numbers[n-1] 까지 숫자중 가장 작은 수를 찾는다. 
+    찾아낸 가장 작은 수와 numbers[i]의 자리를 바꾼다. 
+
+Selection Sort의 경우 (n-1) + (n-2) + (n-3) + ... = n(n-1)/2 = n2/2 - n/2번의 비교를 해야한다. O(n2) 
+그리고 selection sort는 숫자가 이미 잘 정렬 되어 있어도 일찍 알고리즘을 끝낼 수 있는 방법이 없다. 즉 오메가(n2) 이자 세타(n2)이다. 
+
+방법 2. Bubble Sort 
+n-1 번 반복한다.
+    For i from 0 to n-2
+        If numbers[i]와 numbers[ㅑ+1]이 순서가 바뀌어 있으면
+            위치를 바꾼다.
+    If 위치가 한번도 바뀌지 않았을 때
+        멈춘다.
+
+Bubble Sort의 경우 (n-1) * (n-1) = n2 - 2n + 1번 비교해야 하고 빅오 표현법은 O(n2) 즉 Selection Sort와 같다.
+하지만 Bubble Sort의 경우 처음부터 숫자가 잘 정랼되어 있으면 0번부터 n번까지 한번씩 비교한 후 알고리즘이 끝나기 때문에 오메가(n)이 된다. 
+
+방법 3. Merge Sort 
+If 숫자가 하나만 존재하면
+    멈춘다.
+Else
+    왼쪽을 정렬한다.
+    오른쪽을 정렬한다. 
+    두 정렬된 숫자배열을 합친다.
+
+숫자들을 합칠때는 두 배열의 앞쪽 숫자부터 계속 비교해가면서 작은 수를 가지고 오는 방식으로 두 배열을 합친다. 
+ex) 2457    0136
+2 vs 0 -> 0 
+2 vs 1 -> 01 
+2 vs 3 -> 012
+4 vs 3 -> 0123 ...
+
+Merge Sort의 경우 O(nlogn) 이면서 오메가(nlogn) 이고 즉 세타(nlogn)이다.
+
+### 알고리즘들은 언제나 time과 space간의 trade off가 생긴다. 
+ex) merge sort의 경우 두개의 배열을 합칠 메모리 공간이 따로 필요하다.
