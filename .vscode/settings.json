@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "numbers": "c"
+        "numbers": "c",
+        "__config": "c",
+        "*.inc": "c"
     }
 }
