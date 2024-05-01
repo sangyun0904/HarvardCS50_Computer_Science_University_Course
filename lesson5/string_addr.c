@@ -15,5 +15,10 @@ int main(void)
     printf("%i\n\n", s[3]);
     printf("%c\n", *s);
     printf("%c\n", *(s+1));
-    printf("%c\n", *(s+2));
+    printf("%c\n\n", *(s+2));
+    printf("%s\n", s);
+    printf("%s\n", s+1);
+    printf("%s\n", s+2);
+    // C언어에서 꼭 char 배열이 아니라 하더라도 다음 값을 찾고 싶을 때 +1을 해주면 된다.
+    // 즉, 데이터 타입의 바이트 수를 고려하지 않아도 컴파일러가 데이터 타입에 따라 맞는 바이트 수 만큼 이동하여 값을 가지고 온다.
 }
