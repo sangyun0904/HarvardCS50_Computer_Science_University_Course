@@ -2,6 +2,7 @@
     "files.associations": {
         "numbers": "c",
         "__config": "c",
-        "*.inc": "c"
+        "*.inc": "c",
+        "__node_handle": "c"
     }
 }
