@@ -33,4 +33,4 @@ node;
 
 ## Dictionaries
 
-딕셔너리 구조는 key와 value를 가진다. 
+딕셔너리 구조는 key와 value를 가진다. 해쉬는 array와 index를 구하는 계산식의 결합이다.
